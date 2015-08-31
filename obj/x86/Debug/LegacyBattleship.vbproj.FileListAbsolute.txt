@@ -1,0 +1,7 @@
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\obj\x86\Debug\LegacyBattleship.vbprojResolveAssemblyReference.cache
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\lib\SwinGame.dll.mdb
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\ConsoleApplication.exe
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\ConsoleApplication.pdb
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\SwinGame.dll
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\obj\x86\Debug\ConsoleApplication.pdb
