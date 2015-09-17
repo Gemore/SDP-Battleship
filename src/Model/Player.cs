@@ -232,6 +232,11 @@ public class Player : IEnumerable<Ship>
 			} while (!placementSuccessful);
 		}
 	}
+
+	public int ShipsKilled
+	{
+		get { return _playerGrid.ShipsKilled; }
+	}
 }
 
 //=======================================================
