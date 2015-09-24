@@ -18,6 +18,7 @@ static class HighScoreController
 	private const int NAME_WIDTH = 3;
 
 	private const int SCORES_LEFT = 490;
+
 	/// <summary>
 	/// The score structure is used to keep the name and
 	/// score of the top players together.

@@ -50,6 +50,12 @@ public static class GameController
 		get { return _ai; }
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    ///  Adds intial possible states to _state. Bottom one is first state.
+    /// </summary>
 	static GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -118,6 +124,14 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
+    // Added by byron
+
+    /// <summary>
+    ///  Plays the hit animation and sound effect for inputed coordiantes.
+    /// </summary>
+    /// <param name="row">Row of grid position</param>
+    /// <param name="column"> Column of grid postion </param>
+    /// <param name="showAnimation">Should animation be played</param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -129,6 +143,15 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    ///  Plays the animation and sound effect for a miss
+    /// </summary>
+    /// <param name="row">Row of grid postion</param>
+    /// <param name="column">Column of grid postion</param>
+    /// <param name="showAnimation">Should animation be played</param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

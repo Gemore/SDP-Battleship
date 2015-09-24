@@ -251,11 +251,25 @@ static class UtilityFunctions
 		SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 	}
 
+    //Added by Byron
+
+    /// <summary>
+    /// Adds an animation for explosion
+    /// </summary>
+    /// <param name="row">The row to play it</param>
+    /// <param name="col">The collumn to play it</param>
 	public static void AddExplosion(int row, int col)
 	{
 		AddAnimation(row, col, "Splash");
 	}
 
+    //Added by Byron
+
+    /// <summary>
+    /// Adds an animation for a miss effect
+    /// </summary>
+    /// <param name="row">The row to play it</param>
+    /// <param name="col">The collumn to play it</param>
 	public static void AddSplash(int row, int col)
 	{
 		AddAnimation(row, col, "Splash");
@@ -263,6 +277,15 @@ static class UtilityFunctions
 
 
 	private static List<Sprite> _Animations = new List<Sprite>();
+
+    //Added by Byron
+
+    /// <summary>
+    ///  Adds an animation for the coordinates
+    /// </summary>
+    /// <param name="row">Row for animation</param>
+    /// <param name="col">Column for animation</param>
+    /// <param name="image">Image for the animation</param>
 	private static void AddAnimation(int row, int col, string image)
 	{
 		Sprite s = default(Sprite);
@@ -282,6 +305,12 @@ static class UtilityFunctions
 		_Animations.Add(s);
 	}
 
+
+    //Added by Byron
+
+    /// <summary>
+    /// Updates all of the animations that are playing, ends them if over.
+    /// </summary>
 	public static void UpdateAnimations()
 	{
 		List<Sprite> ended = new List<Sprite>();
@@ -298,6 +327,11 @@ static class UtilityFunctions
 		}
 	}
 
+    //Added by Byron
+
+    /// <summary>
+    /// Draws all the animation's current frame
+    /// </summary>
 	public static void DrawAnimations()
 	{
 		foreach (Sprite s in _Animations) {
@@ -305,6 +339,12 @@ static class UtilityFunctions
 		}
 	}
 
+
+    //Added by Byron
+
+    /// <summary>
+    /// This draws the aniamtion for every cell
+    /// </summary>
 	public static void DrawAnimationSequence()
 	{
 		int i = 0;

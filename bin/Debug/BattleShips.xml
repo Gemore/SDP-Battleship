@@ -90,6 +90,11 @@
             game.
             </summary>
         </member>
+        <member name="M:GameController.#cctor">
+            <summary>
+             Adds intial possible states to _state. Bottom one is first state.
+            </summary>
+        </member>
         <member name="M:GameController.StartGame">
             <summary>
             Starts a new game.
@@ -110,6 +115,22 @@
             </summary>
             <param name="sender">the grid that changed</param>
             <param name="args">not used</param>
+        </member>
+        <member name="M:GameController.PlayHitSequence(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+             Plays the hit animation and sound effect for inputed coordiantes.
+            </summary>
+            <param name="row">Row of grid position</param>
+            <param name="column"> Column of grid postion </param>
+            <param name="showAnimation">Should animation be played</param>
+        </member>
+        <member name="M:GameController.PlayMissSequence(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+             Plays the animation and sound effect for a miss
+            </summary>
+            <param name="row">Row of grid postion</param>
+            <param name="column">Column of grid postion</param>
+            <param name="showAnimation">Should animation be played</param>
         </member>
         <member name="M:GameController.AttackCompleted(System.Object,AttackResult)">
             <summary>
@@ -223,6 +244,26 @@
             <value>the computer player</value>
             <returns>the conputer player</returns>
         </member>
+        <member name="M:GameResources.LoadFonts">
+            <summary>
+            Loads the fonts for the program
+            </summary>
+        </member>
+        <member name="M:GameResources.LoadImages">
+            <summary>
+            Load images for the program
+            </summary>
+        </member>
+        <member name="M:GameResources.LoadSounds">
+            <summary>
+            Loads sounds for the program
+            </summary>
+        </member>
+        <member name="M:GameResources.LoadMusic">
+            <summary>
+            Load the music for the program
+            </summary>
+        </member>
         <member name="M:GameResources.GameFont(System.String)">
             <summary>
             Gets a Font Loaded in the Resources
@@ -255,6 +296,100 @@
             <summary>
             The Resources Class stores all of the Games Media Resources, such as Images, Fonts
             Sounds, Music.
+            </summary>
+        </member>
+        <member name="M:GameResources.ShowLoadingScreen">
+            <summary>
+            Displays the loading screen and updates it as features are loaded
+            </summary>
+        </member>
+        <member name="M:GameResources.PlaySwinGameIntro">
+            <summary>
+            Plays the intro to the game
+            </summary>
+        </member>
+        <member name="M:GameResources.ShowMessage(System.String,System.Int32)">
+            <summary>
+            Shows the inputted message
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="number">Width of message</param>
+        </member>
+        <member name="M:GameResources.EndLoadingScreen(System.Int32,System.Int32)">
+            <summary>
+            Ends the loading screen, after a short delay
+            </summary>
+            <param name="width">Width of screen size of the game</param>
+            <param name="height">Height of screen size of the game</param>
+        </member>
+        <member name="M:GameResources.NewFont(System.String,System.String,System.Int32)">
+            <summary>
+            Adds font to list of fonts using parameters.
+            </summary>
+            <param name="fontName">Name of the font</param>
+            <param name="filename">File path</param>
+            <param name="size">Size of the file</param>
+        </member>
+        <member name="M:GameResources.NewImage(System.String,System.String)">
+            <summary>
+            Adds an image to list of images using parameters.
+            </summary>
+            <param name="imageName"> Name of the image</param>
+            <param name="filename">File path</param>
+        </member>
+        <member name="M:GameResources.NewTransparentColorImage(System.String,System.String,SwinGameSDK.Color)">
+            <summary>
+            Adds a transparent color image to the list of images
+            </summary>
+            <param name="imageName">The name of the image</param>
+            <param name="fileName">The file path</param>
+            <param name="transColor">The transparentcy</param>
+        </member>
+        <member name="M:GameResources.NewTransparentColourImage(System.String,System.String,SwinGameSDK.Color)">
+            <summary>
+            Adds a transparent color image to the list of images
+            </summary>
+            <param name="imageName">The name of the image</param>
+            <param name="fileName">The file path</param>
+            <param name="transColor">The transparentcy</param>
+        </member>
+        <member name="M:GameResources.NewSound(System.String,System.String)">
+            <summary>
+            Adds a sound to the list of sounds
+            </summary>
+            <param name="soundName">Name of the sound</param>
+            <param name="filename">The file path</param>
+        </member>
+        <member name="M:GameResources.NewMusic(System.String,System.String)">
+            <summary>
+            Assa a music track to the list of music
+            </summary>
+            <param name="musicName">The name of the music track</param>
+            <param name="filename">The file path</param>
+        </member>
+        <member name="M:GameResources.FreeFonts">
+            <summary>
+            Frees the memory used for all fonts
+            </summary>
+        </member>
+        <member name="M:GameResources.FreeImages">
+            <summary>
+            Frees the memory used for all Images
+            </summary>
+        </member>
+        <member name="M:GameResources.FreeSounds">
+            <summary>
+            Frees the memory used for all sounds
+            </summary>
+        </member>
+        <member name="M:GameResources.FreeMusic">
+            <summary>
+            Frees the memory used for all music
+            </summary>
+        </member>
+        <member name="M:GameResources.FreeResources">
+            <summary>
+            Frees the memory used for all resources
             </summary>
         </member>
         <member name="T:GameState">
@@ -1395,6 +1530,43 @@
         <member name="M:UtilityFunctions.DrawBackground">
             <summary>
             Draws the background for the current state of the game
+            </summary>
+        </member>
+        <member name="M:UtilityFunctions.AddExplosion(System.Int32,System.Int32)">
+            <summary>
+            Adds an animation for explosion
+            </summary>
+            <param name="row">The row to play it</param>
+            <param name="col">The collumn to play it</param>
+        </member>
+        <member name="M:UtilityFunctions.AddSplash(System.Int32,System.Int32)">
+            <summary>
+            Adds an animation for a miss effect
+            </summary>
+            <param name="row">The row to play it</param>
+            <param name="col">The collumn to play it</param>
+        </member>
+        <member name="M:UtilityFunctions.AddAnimation(System.Int32,System.Int32,System.String)">
+            <summary>
+             Adds an animation for the coordinates
+            </summary>
+            <param name="row">Row for animation</param>
+            <param name="col">Column for animation</param>
+            <param name="image">Image for the animation</param>
+        </member>
+        <member name="M:UtilityFunctions.UpdateAnimations">
+            <summary>
+            Updates all of the animations that are playing, ends them if over.
+            </summary>
+        </member>
+        <member name="M:UtilityFunctions.DrawAnimations">
+            <summary>
+            Draws all the animation's current frame
+            </summary>
+        </member>
+        <member name="M:UtilityFunctions.DrawAnimationSequence">
+            <summary>
+            This draws the aniamtion for every cell
             </summary>
         </member>
         <member name="P:UtilityFunctions.Message">

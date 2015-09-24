@@ -8,7 +8,11 @@ using SwinGameSDK;
 
 public static class GameResources
 {
+    // Added by Byron
 
+    /// <summary>
+    /// Loads the fonts for the program
+    /// </summary>
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
@@ -17,6 +21,11 @@ public static class GameResources
 		NewFont("Menu", "ffaccess.ttf", 8);
 	}
 
+    // Added by Byron
+
+    /// <summary>
+    /// Load images for the program
+    /// </summary>
 	private static void LoadImages()
 	{
 		//Backgrounds
@@ -44,6 +53,12 @@ public static class GameResources
 
 	}
 
+
+    // Added by Byron
+
+    /// <summary>
+    /// Loads sounds for the program
+    /// </summary>
 	private static void LoadSounds()
 	{
 		NewSound("Error", "error.wav");
@@ -55,6 +70,12 @@ public static class GameResources
 		NewSound("Lose", "lose.wav");
 	}
 
+
+    // Added by Byron
+
+    /// <summary>
+    /// Load the music for the program
+    /// </summary>
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "horrordrone.mp3");
@@ -155,6 +176,11 @@ public static class GameResources
 		EndLoadingScreen(width, height);
 	}
 
+    // Added by byron
+
+    /// <summary>
+    /// Displays the loading screen and updates it as features are loaded
+    /// </summary>
 	private static void ShowLoadingScreen()
 	{
 		_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
@@ -172,6 +198,11 @@ public static class GameResources
 		PlaySwinGameIntro();
 	}
 
+    // Added by byron
+
+    /// <summary>
+    /// Plays the intro to the game
+    /// </summary>
 	private static void PlaySwinGameIntro()
 	{
 		const int ANI_X = 143;
@@ -197,6 +228,13 @@ public static class GameResources
 
 	}
 
+    // Added by byron
+
+    /// <summary>
+    /// Shows the inputted message
+    /// </summary>
+    /// <param name="message">Message to show</param>
+    /// <param name="number">Width of message</param>
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -219,6 +257,13 @@ public static class GameResources
 		SwinGame.ProcessEvents();
 	}
 
+    // Added by byron
+
+    /// <summary>
+    /// Ends the loading screen, after a short delay
+    /// </summary>
+    /// <param name="width">Width of screen size of the game</param>
+    /// <param name="height">Height of screen size of the game</param>
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();
@@ -234,36 +279,91 @@ public static class GameResources
 		SwinGame.ChangeScreenSize(width, height);
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    /// Adds font to list of fonts using parameters.
+    /// </summary>
+    /// <param name="fontName">Name of the font</param>
+    /// <param name="filename">File path</param>
+    /// <param name="size">Size of the file</param>
 	private static void NewFont(string fontName, string filename, int size)
 	{
 		_Fonts.Add(fontName, SwinGame.LoadFont(SwinGame.PathToResource(filename, ResourceKind.FontResource), size));
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    /// Adds an image to list of images using parameters.
+    /// </summary>
+    /// <param name="imageName"> Name of the image</param>
+    /// <param name="filename">File path</param>
 	private static void NewImage(string imageName, string filename)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(filename, ResourceKind.BitmapResource)));
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    /// Adds a transparent color image to the list of images
+    /// </summary>
+    /// <param name="imageName">The name of the image</param>
+    /// <param name="fileName">The file path</param>
+    /// <param name="transColor">The transparentcy</param>
 	private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(fileName, ResourceKind.BitmapResource), true, transColor));
 	}
 
+
+    // Added by byron
+
+    /// <summary>
+    /// Adds a transparent color image to the list of images
+    /// </summary>
+    /// <param name="imageName">The name of the image</param>
+    /// <param name="fileName">The file path</param>
+    /// <param name="transColor">The transparentcy</param>
 	private static void NewTransparentColourImage(string imageName, string fileName, Color transColor)
 	{
 		NewTransparentColorImage(imageName, fileName, transColor);
 	}
 
+
+    //Added by byron
+
+    /// <summary>
+    /// Adds a sound to the list of sounds
+    /// </summary>
+    /// <param name="soundName">Name of the sound</param>
+    /// <param name="filename">The file path</param>
 	private static void NewSound(string soundName, string filename)
 	{
 		_Sounds.Add(soundName, Audio.LoadSoundEffect(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
 
+    //Added by byron
+
+    /// <summary>
+    /// Assa a music track to the list of music
+    /// </summary>
+    /// <param name="musicName">The name of the music track</param>
+    /// <param name="filename">The file path</param>
 	private static void NewMusic(string musicName, string filename)
 	{
 		_Music.Add(musicName, Audio.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
 
+    //Added by byron
+
+    /// <summary>
+    /// Frees the memory used for all fonts
+    /// </summary>
 	private static void FreeFonts()
 	{
 		//Font obj = default(Font);
@@ -272,6 +372,12 @@ public static class GameResources
 		}
 	}
 
+
+    //Added by byron
+
+    /// <summary>
+    /// Frees the memory used for all Images
+    /// </summary>
 	private static void FreeImages()
 	{
 		//Bitmap obj = default(Bitmap);
@@ -280,6 +386,11 @@ public static class GameResources
 		}
 	}
 
+    //Added by byron
+
+    /// <summary>
+    /// Frees the memory used for all sounds
+    /// </summary>
 	private static void FreeSounds()
 	{
 		//SoundEffect obj = default(SoundEffect);
@@ -288,6 +399,11 @@ public static class GameResources
 		}
 	}
 
+    //Added by byron
+
+    /// <summary>
+    /// Frees the memory used for all music
+    /// </summary>
 	private static void FreeMusic()
 	{
 		//Music obj = default(Music);
@@ -296,6 +412,11 @@ public static class GameResources
 		}
 	}
 
+    //Added by byron
+
+    /// <summary>
+    /// Frees the memory used for all resources
+    /// </summary>
 	public static void FreeResources()
 	{
 		FreeFonts();
