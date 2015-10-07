@@ -18,7 +18,6 @@ static class HighScoreController
 	private const int NAME_WIDTH = 3;
 
 	private const int SCORES_LEFT = 490;
-
 	/// <summary>
 	/// The score structure is used to keep the name and
 	/// score of the top players together.
@@ -80,7 +79,7 @@ static class HighScoreController
 			line = input.ReadLine();
 
 			s.Name = line.Substring(0, NAME_WIDTH);
-			s.Value = Convert.ToInt32(line.Substring(NAME_WIDTH));
+			s.Value = Convert.ToInt32(line.Substring(3));
 			_Scores.Add(s);
 		}
 		input.Close();
@@ -199,7 +198,7 @@ static class HighScoreController
 			_Scores.RemoveAt(_Scores.Count - 1);
 			_Scores.Add(s);
 			_Scores.Sort();
-
+			SaveScores ();
 			GameController.EndCurrentState();
 		}
 	}
