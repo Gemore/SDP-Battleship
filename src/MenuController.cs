@@ -321,13 +321,14 @@ static class MenuController
             case GAME_MENU_MUTE:
                 if (_MusicPlaying)
                 {
+
                     SwinGame.PauseMusic();
-                    _MusicPlaying = false;
+                    _MusicPlaying = false; //Turns music off
                 }
                 else
                 {
                     SwinGame.ResumeMusic();
-                    _MusicPlaying = true;
+                    _MusicPlaying = true; //Turns music on
                 }
                 break;
 

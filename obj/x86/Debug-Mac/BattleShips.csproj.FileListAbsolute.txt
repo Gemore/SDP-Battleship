@@ -123,3 +123,6 @@ C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\Battl
 C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\SwinGame.dll
 C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\bin\Debug\nunit.framework.xml
 C:\Users\Byron\Documents\Visual Studio 2013\Projects\battleships\obj\x86\Debug-Mac\BattleShips.csprojResolveAssemblyReference.cache
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\toFuckWithBattleships\SDP-Battleship\bin\Debug\BattleShips.xml
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\toFuckWithBattleships\SDP-Battleship\obj\x86\Debug-Mac\BattleShips.exe
+C:\Users\Byron\Documents\Visual Studio 2013\Projects\toFuckWithBattleships\SDP-Battleship\obj\x86\Debug-Mac\BattleShips.pdb
